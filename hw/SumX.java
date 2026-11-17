@@ -6,8 +6,7 @@ public class SumX {
     //@ ensures \result == x * (x + 1) / 2;
     public static int sum(int x) {
         int s = 0, i = 0;
-        // TODO (2): this invariant is true, but is it enough?
-        //@ loop_invariant 0 <= i && i <= x;
+        //@ loop_invariant 0 <= i && i <= x && s == i * (i + 1) / 2;
         //@ decreases x - i;
         while (i < x) {
             i = i + 1;
