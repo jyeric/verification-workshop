@@ -35,7 +35,6 @@ public class CompositeCheck {
         for (Composite c = n.firstChild; c != null; c = c.nextSibling) {
             assert c.parent == n;                  // each child points back to its parent
         }
-        // TODO (1): value is the maximum of initValue and the children's values;
         // maxChild is null exactly when value == initValue, and otherwise it is
         // one of the children and its value is value.
     }

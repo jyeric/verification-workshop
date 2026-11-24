@@ -12,8 +12,8 @@ public record Range(int lo, int hi) {
 
     // Number of ints in the interval.
     //@ ensures \result == (long) hi - lo + 1;
-    public int size() {
-        return hi - lo + 1;
+    public long size() {
+        return (long) hi - lo + 1;
     }
 
     //@ ensures \result <==> (lo <= x && x <= hi);
